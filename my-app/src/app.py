@@ -1,7 +1,6 @@
 # Using the Yelp API to find what you're looking for and make a decision for you
 # Inspired by me being indecisive and never knowing where to go for food
 
-import IPython
 import requests
 from pprint import pprint
 from random import randint
@@ -9,15 +8,18 @@ import json
 from flask import Flask, send_from_directory
 from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS #comment this on deployment
-from api.HelloApiHandler import HelloApiHandler
+import sys
+sys.path.append('c:/users/chowm/downloads')
+import bearycal_diningapi as bc
 
-import os
+import os 
 
 app = Flask(__name__)
 cors = CORS(app)
-
-yelp_api_key = os.environ['YELP_TOKEN']
-caldining_api_key = os.environ['CALDINING_TOKEN']
+x = bc.apikey()
+"""yelp_api_key = os.environ['YELP_TOKEN']
+caldining_api_key = os.environ['CALDINING_TOKEN']"""
+caldining_api_key = x.getapi()
 
 @app.route("/", methods=["GET", "POST"])
 def dining_hall_rec():
