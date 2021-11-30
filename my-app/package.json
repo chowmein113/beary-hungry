@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "heroku-flask-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,8 +14,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "gunicorn server.app:app",
-    "build": "npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
