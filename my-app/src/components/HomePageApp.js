@@ -10,20 +10,12 @@ class HomePageApp extends React.Component {
       <div>
         <title>Beary Hungry</title>
         <style dangerouslySetInnerHTML={{ __html: "\n      .img-container {\n        text-align: center;\n      }\n    " }} />
-        <div><input type="text" placeholder="Search me.." id="myInput" onkeyup="filterFunction()" /></div>
         <div className="img-container"> {/* Block parent element */}
           <img src={logo} alt="We are all Beary Hungry" width={350} height={250} />
           <link rel="stylesheet" href="style.css" />
           <div className="dropdown">
-            <button onclick="myFunction()" className="dropbtn">What's for dinner?</button>
-            <div id="myDropdown" className="dropdown-content">
-              <div>
-                <a href="#about"><img src={paw} width={75} height={75} />Home</a>
-                <a href="#Cal Dining">Cal Dining</a>
-                <a href="#Restaurants">Restaurants</a>
-                <a href="#Contact">Contact<img src={paw} width={75} height={75} /></a>
-              </div>
-            </div>
+            <div><input type="text" placeholder="Search me.." id="myInput" onkeyup="filterFunction()" /></div>
+
           </div>
           {/* Control buttons */}
           <div id="myBtnContainer">
