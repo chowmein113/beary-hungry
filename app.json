@@ -1,0 +1,39 @@
+{
+    "name": "Heroku Flask/React Sample",
+    "description": "This app serves as a sample for deploying a Flask web app with a React JS frontend to Heroku.",
+    "keywords": [
+      "Heroku",
+      "Flask",
+      "React",
+      "frontend",
+      "server",
+      "deploy"
+    ],
+    "repository": "https://github.com/ShaylanDias/Heroku-React-Flask",
+    "success_url": "/",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "env": {
+      "FLASK_APP": {
+        "description": "The FLASK_APP variable for pointing to the app",
+        "value": "server.app:app"
+      },
+      "WEB_CONCURRENCY": {
+        "description": "The number of processes to run.",
+        "value": "3"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
