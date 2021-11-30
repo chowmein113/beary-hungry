@@ -1,9 +1,12 @@
-var NewComponent = React.createClass({
-  render: function() {
+import React from 'react'
+import styles from '../styles/HomePageApp.css';
+
+class HomePageApp extends React.Component {
+  render() {
     return (
       <div>
         <title>Beary Hungry</title>
-        <style dangerouslySetInnerHTML={{__html: "\n      .img-container {\n        text-align: center;\n      }\n    " }} />
+        <style dangerouslySetInnerHTML={{ __html: "\n      .img-container {\n        text-align: center;\n      }\n    " }} />
         <div><input type="text" placeholder="Search me.." id="myInput" onkeyup="filterFunction()" /></div>
         <div className="img-container"> {/* Block parent element */}
           <img src="logo.png" alt="We are all Beary Hungry" width={350} height={250} />
@@ -43,12 +46,12 @@ var NewComponent = React.createClass({
             <div className="filterDiv american">Super Duper</div>
             <div className="filterDiv mexican">La Vals</div>
           </div>
-          <style dangerouslySetInnerHTML={{__html: "\nbody {\n  background-image: url('background.png');\n}\n" }} />
+          <style dangerouslySetInnerHTML={{ __html: "\nbody {\n  background-image: url('background.png');\n}\n" }} />
           {/*<img src="Untitled.png" />*/}
         </div></div>
     );
   }
-});
+};
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
