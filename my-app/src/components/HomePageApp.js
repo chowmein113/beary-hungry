@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from '../styles/HomePageApp.css';
+import logo from '../assets/HomePageApp/logo.png';
+import paw from '../assets/HomePageApp/Bear paw.png';
 
 class HomePageApp extends React.Component {
   render() {
@@ -9,16 +11,16 @@ class HomePageApp extends React.Component {
         <style dangerouslySetInnerHTML={{ __html: "\n      .img-container {\n        text-align: center;\n      }\n    " }} />
         <div><input type="text" placeholder="Search me.." id="myInput" onkeyup="filterFunction()" /></div>
         <div className="img-container"> {/* Block parent element */}
-          <img src="logo.png" alt="We are all Beary Hungry" width={350} height={250} />
+          <img src={logo} alt="We are all Beary Hungry" width={350} height={250} />
           <link rel="stylesheet" href="style.css" />
           <div className="dropdown">
             <button onclick="myFunction()" className="dropbtn">What's for dinner?</button>
             <div id="myDropdown" className="dropdown-content">
               <div>
-                <a href="#about"><img src="Bear paw.png" width={75} height={75} />Home</a>
+                <a href="#about"><img src={paw} width={75} height={75} />Home</a>
                 <a href="#Cal Dining">Cal Dining</a>
                 <a href="#Restaurants">Restaurants</a>
-                <a href="#Contact">Contact<img src="Bear paw.png" width={75} height={75} /></a>
+                <a href="#Contact">Contact<img src={paw} width={75} height={75} /></a>
               </div>
             </div>
           </div>
