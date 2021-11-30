@@ -35,7 +35,7 @@ class DiningHallPage extends React.Component {
 
   async getMenus(event) {
     event.preventDefault();
-    let response = await fetch("[Url Here]", {
+    let response = await fetch("http://127.0.0.1:5500/dining_hall", {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(this.state)
