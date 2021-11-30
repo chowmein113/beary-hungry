@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/HomePageApp.css';
 import logo from '../assets/HomePageApp/logo.png';
 import paw from '../assets/HomePageApp/Bear paw.png';
+import background from '../assets/HomePageApp/background.png'
 
 class HomePageApp extends React.Component {
   render() {
@@ -48,7 +49,7 @@ class HomePageApp extends React.Component {
             <div className="filterDiv american">Super Duper</div>
             <div className="filterDiv mexican">La Vals</div>
           </div>
-          <style dangerouslySetInnerHTML={{ __html: "\nbody {\n  background-image: url('background.png');\n}\n" }} />
+          <style dangerouslySetInnerHTML={{ __html: "\nbody {\n  background-image: {background};\n}\n" }} />
           {/*<img src="Untitled.png" />*/}
         </div></div>
     );
