@@ -12,7 +12,7 @@ var NewComponent = React.createClass({
             <button onclick="myFunction()" className="dropbtn">What's for dinner?</button>
             <div id="myDropdown" className="dropdown-content">
               <div>
-                <a href="#about"><img src="Bear paw.png" width={75} height={75} />Home</a>
+                <a href="#About"><img src="Bear paw.png" width={75} height={75} />Home</a>
                 <a href="#Cal Dining">Cal Dining</a>
                 <a href="#Restaurants">Restaurants</a>
                 <a href="#Contact">Contact<img src="Bear paw.png" width={75} height={75} /></a>
