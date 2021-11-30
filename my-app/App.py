@@ -69,7 +69,10 @@ def yelp_rec():
 caldining_api_key = os.environ['CALDINING_TOKEN']"""
 #caldining_api_key = x.getapi()
 caldining_api_key = '7d3f45db83msh3471806ea5421a7p11c24fjsn8955a8c1e20f'
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8188d61d7c8a1740749a937d969c3dd18cbb50a
 
 @app.route("/dining_hall", methods=["GET", "POST"])
 def dining_hall_rec():
