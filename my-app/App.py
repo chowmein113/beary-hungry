@@ -18,13 +18,15 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 api_key = "wf1-IYsyEoU-CgmrkC0m9RqQpnckeqPaiYG2NNhLzAlH7Nqb6f2WtDvpdD7mir8pm_RL7uVGfI5WUpe1fWl7kuIHlDbIYRTHpqUnoLirhziejFWoNA1JeWnHFvDiXXYx"
 
 
-@app.route("/yelp", methods=["GET"])
+@app.route('/api', methods=["GET"])
 def yelp_rec():
-    headers = {'Authorization': 'Bearer %s' % api_key}
-    r = requests.request(
-        'GET', f"https://api.yelp.com/v3/businesses/search?term=chinese", headers=headers, params=None)
-    print(r.content)
-    return 'Hello'
+    #headers = {'Authorization': 'Bearer %s' % api_key}
+    #r = requests.request(
+    #    'GET', f"https://api.yelp.com/v3/businesses/search?term=chinese", headers=headers, params=None)
+    #print(r.content)
+    return {
+        'Hello' : 3
+    }
     # if request.method == "POST":
     #     price = request.json['price']
     #     rating = int(request.json['rating'])
@@ -52,31 +54,30 @@ def yelp_rec():
     #     return places_by_cusine
 
 
+#x = bc.apikey()
+#"""yelp_api_key = os.environ['YELP_TOKEN']
+#caldining_api_key = os.environ['CALDINING_TOKEN']"""
+#caldining_api_key = x.getapi()
+#
+#@app.route("/dining_hall", methods=["GET", "POST"])
+#def dining_hall_rec():
+#    """url = "https://caldining.p.rapidapi.com/menu"
+#    headers = {
+#        'x-rapidapi-key': caldining_api_key,
+#        'x-rapidapi-host': "caldining.p.rapidapi.com"
+#    }    
+#    response = requests.request("GET", url, headers=headers)
+#    result = json.loads(json.loads(response.text))"""
+#    
+#    headers = {'x-rapidapi-host': 'caldining.p.rapidapi.com',
+#    'x-rapidapi-key': caldining_api_key }
+#    r = requests.request('GET', f"https://caldining.p.rapidapi.com/menu", headers=headers, params=None)
+#    dining_halls = r.json()
+#    dining = json.loads(dining_halls)
+#    return dining
 
-x = bc.apikey()
-"""yelp_api_key = os.environ['YELP_TOKEN']
-caldining_api_key = os.environ['CALDINING_TOKEN']"""
-caldining_api_key = x.getapi()
 
-@app.route("/dining_hall", methods=["GET", "POST"])
-def dining_hall_rec():
-    """url = "https://caldining.p.rapidapi.com/menu"
-    headers = {
-        'x-rapidapi-key': caldining_api_key,
-        'x-rapidapi-host': "caldining.p.rapidapi.com"
-    }    
-    response = requests.request("GET", url, headers=headers)
-    result = json.loads(json.loads(response.text))"""
     
-    headers = {'x-rapidapi-host': 'caldining.p.rapidapi.com',
-    'x-rapidapi-key': caldining_api_key }
-    r = requests.request('GET', f"https://caldining.p.rapidapi.com/menu", headers=headers, params=None)
-    dining_halls = r.json()
-    dining = json.loads(dining_halls)
-    return dining
-
-
-    """return json.dumps(result, indent = 2)"""
 
 
 
