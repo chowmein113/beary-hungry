@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles/HomePageApp.css';
 
-var HomePageApp = React.createClass({
+var HomePageApp = React.Component({
   render: function() {
     return (
       <div>
