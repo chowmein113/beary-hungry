@@ -3,6 +3,8 @@ import styles from '../styles/HomePageApp.css';
 import logo from '../assets/HomePageApp/logo.png';
 import paw from '../assets/HomePageApp/Bear paw.png';
 import background from '../assets/HomePageApp/background.png'
+import RestaurantApp from './RestaurantApp';
+import DiningHallApp from './DiningHallApp';
 
 class HomePageApp extends React.Component {
   render() {
@@ -19,28 +21,13 @@ class HomePageApp extends React.Component {
           </div>
           {/* Control buttons */}
           <div id="myBtnContainer">
-            <button className="btn" onclick="filterSelection('all')"> Show all</button>
-            <button className="btn" onclick="filterSelection('boba')"> Boba</button>
-            <button className="btn" onclick="filterSelection('mexican')"> Mexican</button>
-            <button className="btn" onclick="filterSelection('american')"> American</button>
-            <button className="btn" onclick="filterSelection('asian')"> Asian</button>
+            <button className="btn"><a href="/dining">Dining</a></button>
+            <button className="btn"><a href="/restaurants">Boba</a></button>
+            <button className="btn"><a href="/restaurants">Mexican</a></button>
+            <button className="btn"><a href="/restaurants">American</a></button>
+            <button className="btn"><a href="/restaurants">Asian</a></button>
           </div>
           {/* The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) */}
-          <div className="container">
-            <div className="filterDiv boba">Fencha</div>
-            <div className="filterDiv asian">Thai Basil</div>
-            <div className="filterDiv boba">Yifang</div>
-            <div className="filterDiv asian">Great China</div>
-            <div className="filterDiv boba">Sweet Heart</div>
-            <div className="filterDiv asian">Steve's KBBQ</div>
-            <div className="filterDiv mexican">Tacos n Co</div>
-            <div className="filterDiv mexican">La Burrita</div>
-            <div className="filterDiv american">Super Duper</div>
-            <div className="filterDiv american">Bongo Burger</div>
-            <div className="filterDiv american">Gather</div>
-            <div className="filterDiv american">Super Duper</div>
-            <div className="filterDiv mexican">La Vals</div>
-          </div>
           <style dangerouslySetInnerHTML={{ __html: "\nbody {\n  background-image: {background};\n}\n" }} />
           {/*<img src="Untitled.png" />*/}
         </div></div>
