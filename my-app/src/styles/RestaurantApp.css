@@ -80,7 +80,9 @@ body {
 .filters {
    display: flex;
    flex-direction: row;
-   /* padding-right: 80px; */
+   padding-right: 200px;
+   padding-top:30px;
+   padding-left: 40px;
 }
  
 .filter {
@@ -96,16 +98,10 @@ body {
    margin: 10px;
 }
  
-.logo {
-   padding-top: 10px;
-   /* display: flex; */
-   /* padding-left: 50px; */
-   /* justify-content: center; */
-   width: 350px;
-   height: 250px;
-   /* flex-direction:row; */
-}
- 
+.logo{
+    width: 530px;
+} 
+
 .rowC{
    display: flex;
    flex-direction:row;
@@ -114,7 +110,7 @@ body {
 .google_maps {
    padding-top: 10px;
    display: flex;
-   padding-left: 50px;
+   padding-left: 100px;
    justify-content: right;
    flex-direction:row;
 }

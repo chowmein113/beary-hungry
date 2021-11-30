@@ -29,12 +29,14 @@ function Header(props) {
  
 // logo
  
-//function Logo(props) {
-// return (
- 
- //  <img src={require('./logo.png')} alt="Logo" />
- //)
-//}
+function Logo(props) {
+  return (
+    <div className="logo">
+      <img src={logo} alt="Logo" />
+    </div>
+  );
+ }
+
  
 // Search Bar
  
@@ -174,7 +176,7 @@ class RestaurantPage extends React.Component {
        <SearchBar />
        <div className='rowC'>
          <Filters />
-         <img src={logo} alt="Logo" />
+         <Logo />
          <Map />
        </div>
        <RestaurantGrid />
