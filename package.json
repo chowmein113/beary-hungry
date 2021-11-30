@@ -28,5 +28,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chowmein113/beary-hungry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chowmein113/beary-hungry/issues"
+  },
+  "homepage": "https://github.com/chowmein113/beary-hungry#readme",
+  "description": ""
 }
