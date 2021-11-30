@@ -28,7 +28,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 api_key = "wf1-IYsyEoU-CgmrkC0m9RqQpnckeqPaiYG2NNhLzAlH7Nqb6f2WtDvpdD7mir8pm_RL7uVGfI5WUpe1fWl7kuIHlDbIYRTHpqUnoLirhziejFWoNA1JeWnHFvDiXXYx"
 
 
-@app.route('/', methods = ["GET"] )
+@app.route('/yelp', methods = ["GET"] )
 def yelp_rec():
     #headers = {'Authorization': 'Bearer %s' % api_key}
     #r = requests.request(
