@@ -1,85 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class HomePageApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      yelpData: null,
-      price: '$',
-      rating: '1',
-      distance: '',
-      cuisine: '',
-    };
-    this.setPrice = this.setPrice.bind(this);
-    this.setRating = this.setRating.bind(this);
-    this.setDistance = this.setDistance.bind(this);
-    this.setCuisine = this.setCuisine.bind(this);
-    this.getRestaurant = this.getRestaurant.bind(this);
-  }
-  setPrice(event) {
-    this.setState({ price: event.target.value });
-  }
-  setRating(event) {
-    this.setState({ rating: event.target.value });
-  }
-  setDistance(event) {
-    this.setState({ distance: event.target.value });
-  }
-  setCuisine(event) {
-    this.setState({ cuisine: event.target.value });
-  }
-
-  async getRestaurant(event) {
-    event.preventDefault();
-    let response = await fetch("/restaurant", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(this.state)
-    });
-    let data = await response.json();
-    data = JSON.stringify(data);
-    this.setState({ yelpData: data });
-  }
-
-  render() {
+var NewComponent = React.createClass({
+  render: function() {
     return (
       <div>
-        <form onSubmit={this.getRestaurant}>
-          <label>
-            Price:
-            <select value={this.state.price} onChange={this.setPrice}>
-              <option value="$">$</option>
-              <option value="$$">$$</option>
-              <option value="$$$">$$$</option>
-              <option value="$$$$">$$$$</option>
-            </select>
-          </label>
-          <label>
-            Rating:
-            <select value={this.state.rating} onChange={this.setRating}>
-              <option value="1">1 star</option>
-              <option value="2">2 star</option>
-              <option value="3">3 star</option>
-              <option value="4">4 star</option>
-              <option value="5">5 star</option>
-            </select>
-          </label>
-          <label>
-            Distance:
-            <textarea value={this.state.distance} onChange={this.setDistance} />
-          </label>
-          <label>
-            What kind of food?:
-            <textarea value={this.state.cuisine} onChange={this.setCuisine} />
-          </label>
-          <input type="submit" value="Get Suggestion" />
-        </form>
-        <p id="suggestion">Result: {this.state.yelpData}</p>
-      </div>
+        <title>Beary Hungry</title>
+        <style dangerouslySetInnerHTML={{__html: "\n      .img-container {\n        text-align: center;\n      }\n    " }} />
+        <div><input type="text" placeholder="Search me.." id="myInput" onkeyup="filterFunction()" /></div>
+        <div className="img-container"> {/* Block parent element */}
+          <img src="logo.png" alt="We are all Beary Hungry" width={350} height={250} />
+          <link rel="stylesheet" href="style.css" />
+          <div className="dropdown">
+            <button onclick="myFunction()" className="dropbtn">What's for dinner?</button>
+            <div id="myDropdown" className="dropdown-content">
+              <div>
+                <a href="#about"><img src="Bear paw.png" width={75} height={75} />Home</a>
+                <a href="#Cal Dining">Cal Dining</a>
+                <a href="#Restaurants">Restaurants</a>
+                <a href="#Contact">Contact<img src="Bear paw.png" width={75} height={75} /></a>
+              </div>
+            </div>
+          </div>
+          {/* Control buttons */}
+          <div id="myBtnContainer">
+            <button className="btn" onclick="filterSelection('all')"> Show all</button>
+            <button className="btn" onclick="filterSelection('boba')"> Boba</button>
+            <button className="btn" onclick="filterSelection('mexican')"> Mexican</button>
+            <button className="btn" onclick="filterSelection('american')"> American</button>
+            <button className="btn" onclick="filterSelection('asian')"> Asian</button>
+          </div>
+          {/* The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) */}
+          <div className="container">
+            <div className="filterDiv boba">Fencha</div>
+            <div className="filterDiv asian">Thai Basil</div>
+            <div className="filterDiv boba">Yifang</div>
+            <div className="filterDiv asian">Great China</div>
+            <div className="filterDiv boba">Sweet Heart</div>
+            <div className="filterDiv asian">Steve's KBBQ</div>
+            <div className="filterDiv mexican">Tacos n Co</div>
+            <div className="filterDiv mexican">La Burrita</div>
+            <div className="filterDiv american">Super Duper</div>
+            <div className="filterDiv american">Bongo Burger</div>
+            <div className="filterDiv american">Gather</div>
+            <div className="filterDiv american">Super Duper</div>
+            <div className="filterDiv mexican">La Vals</div>
+          </div>
+          <style dangerouslySetInnerHTML={{__html: "\nbody {\n  background-image: url('background.png');\n}\n" }} />
+          {/*<img src="Untitled.png" />*/}
+        </div></div>
     );
   }
-}
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
