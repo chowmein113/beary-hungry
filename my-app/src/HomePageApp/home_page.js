@@ -1,4 +1,8 @@
-var NewComponent = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styles from '../styles/HomePageApp.css';
+
+var HomePageApp = React.createClass({
   render: function() {
     return (
       <div>
