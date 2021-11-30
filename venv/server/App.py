@@ -7,8 +7,8 @@ import os
 import sys
 
 
-"""sys.path.append('c:/users/chowm/downloads')
-import bearycal_diningapi as bc"""
+sys.path.append('c:/users/chowm/downloads')
+import bearycal_diningapi as bc
 
 
 app = Flask(__name__)
@@ -52,11 +52,10 @@ def yelp_rec():
     #     return places_by_cusine
 
 
-#x = bc.apikey()
+x = bc.apikey()
 """yelp_api_key = os.environ['YELP_TOKEN']
 caldining_api_key = os.environ['CALDINING_TOKEN']"""
-#caldining_api_key = x.getapi()
-caldining_api_key = '7d3f45db83msh3471806ea5421a7p11c24fjsn8955a8c1e20f'
+caldining_api_key = x.getapi()
 
 @app.route("/dining_hall", methods=["GET", "POST"])
 def dining_hall_rec():
